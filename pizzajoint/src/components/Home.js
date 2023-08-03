@@ -13,6 +13,13 @@ const containerVariants = {
 		transition: {
 			type: "spring",
 			delay: 0.5,
+			duration: 1.5,
+		},
+	},
+	exit: {
+		x: "-100vw",
+		transition: {
+			ease: "easeInOut",
 		},
 	},
 };
@@ -30,7 +37,13 @@ const buttonVariants = {
 
 const Home = () => {
 	return (
-		<motion.div className="home container" variants={containerVariants}>
+		<motion.div
+			className="home container"
+			variants={containerVariants}
+			initial="hidden"
+			animate="visible"
+			exit="exit"
+		>
 			<h2>Welcome to Pizza Joint</h2>
 			<Link to="/base">
 				<motion.button variants={buttonVariants} whileHover="hover">
