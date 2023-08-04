@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+import Loader from "./Loader";
+
 const containerVariants = {
 	hidden: {
 		opacity: 0,
@@ -50,6 +52,7 @@ const Home = () => {
 					Create Your Pizza
 				</motion.button>
 			</Link>
+			<Loader />
 		</motion.div>
 	);
 };
